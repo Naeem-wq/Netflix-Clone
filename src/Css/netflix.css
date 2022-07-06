@@ -1,0 +1,12 @@
+*{box-sizing: border-box;}
+
+body{
+    margin: 0%;
+    background-color: rgb(29, 27, 27);
+    color: #fff;
+}
+
+#netflixLogo{
+    width: 150px;
+    margin: 20px;
+}
