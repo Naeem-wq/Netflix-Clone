@@ -1,6 +1,8 @@
-*{box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
-body{
+body {
     margin: 0%;
     background-color: rgb(29, 27, 27);
     color: #fff;
@@ -9,7 +11,84 @@ body{
     background-blend-mode: soft-light;
 }
 
-#netflixLogo{
+#netflixLogo {
     width: 180px;
     margin: 20px;
+}
+
+.login {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 38%;
+    background: rgba(0, 0, 0, .75);
+    border-radius: 4px;
+    width: 400px;
+    height: 500px;
+    padding: 50px 60px 50px;
+}
+
+.login__title {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.login__group {
+    position: relative;
+    z-index: 10;
+    display: flex;
+}
+
+.login__group ::placeholder {
+    font-size: large;
+}
+
+.login__group__input {
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    background: #333;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: none;
+    opacity: 1;
+    font-size: 1rem;
+    color: #fff;
+    line-height: 50px;
+    padding: 12px 18px 0;
+}
+
+.login__sign-in {
+    margin: 24px 0 12px;
+    padding: 16px;
+    background: #e50914;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#signInText {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#signInText:visited{
+    color: #fff;
+}
+
+.login__secondary-cta {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login__secondary-cta__text {
+    opacity: 1;
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    text-decoration: none;
 }

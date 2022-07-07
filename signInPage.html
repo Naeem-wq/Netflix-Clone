@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,14 +21,32 @@
     <header>
         <a href="index.html"><img src="./Images/netflixLogo.png" alt="netflixLogo" id="netflixLogo"></a>
 
-        
+
 
     </header>
 
     <main>
-        <h1>This is my Sign In Page</h1>
 
-        <button><a href="who'sWatching.html">Sign In</a></button>
+        <div class="login">
+            <h1 class="login__title">Sign In</h1>
+
+            <div class="login__group">
+                <input class="login__group__input" type="text" required="true" placeholder="Email or phone number"/>
+            </div>
+
+            <div class="login__group">
+                <input class="login__group__input" type="password" required="true" placeholder="Password"/>
+            </div>
+
+            <button class="login__sign-in" type="button"><a href="who'sWatching.html" id="signInText">Sign In</a></button>
+
+            <div class="login__secondary-cta">
+                <a class="login__secondary-cta__text" href="#">Remember me</a>
+
+                <a class="login__secondary-cta__text login__secondary-cta__text--need-help" href="#">Need help?</a>
+            </div>
+        </div>
+
     </main>
 
     <footer>
@@ -35,7 +54,7 @@
 
     </footer>
 
-    
+
 </body>
 
 </html>
