@@ -7,6 +7,35 @@ body{
 }
 
 #netflixLogo{
+    position: fixed;
     width: 150px;
     margin: 20px;
+    opacity: 60%;
+}
+
+#signOut{
+    background: #e50914;
+    position: fixed;
+    top: 3%;
+    right: 2%;
+    border-radius: 4px;
+    padding: 4px 17px;
+    outline: none;
+    border: none;
+}
+
+#signOutText{
+    color: #fff;
+    text-decoration: none;
+}
+
+.trailer{
+    text-align: center;
+}
+
+#trailerVideo{
+    padding-top: 4.5%;
+    background-color: #000;
+    width: 100%;
+    height: 65vh;
 }
