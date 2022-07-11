@@ -76,19 +76,19 @@ body{
     padding: 70px 45px;
 }
 .container .title .content{
-    width: 950px;
-    margin: auto;
+    width: auto;
     padding: 75px 0;
     text-align: center;
 }
 .container .title .content h1{
-    width: 650px;
+    text-align: center;
+    width: auto;
     margin: auto;
     font-size: 3.1rem;
     text-align: center;
 }
 .container .title .content h2{
-    width: 650px;
+    width: auto;
     margin: auto;
     font-size: 1.6rem;
     text-align: center;
@@ -99,8 +99,7 @@ body{
     text-align: center;
 }
 .container .title .content form .email{
-    width: 1000px;
-    margin: auto;
+    width: auto;
 }
 .container .title .content form .email input{
     height: 60px;
