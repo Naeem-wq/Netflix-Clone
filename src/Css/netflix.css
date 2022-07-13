@@ -29,13 +29,47 @@ body{
     text-decoration: none;
 }
 
-.trailer{
-    text-align: center;
+#trailerVideo{
+    width: 100%;
+    height: 80vh;
+    background-image: url("/Images/videoImage.jpeg");
 }
 
-#trailerVideo{
-    padding-top: 4.5%;
-    background-color: #000;
-    width: 100%;
-    height: 65vh;
+.catergories{
+    display: flex;
+    justify-content: center;
+    gap: 12em;
+}
+
+.catergoryItem{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 1%;
+}
+
+.catergoryItem:hover{
+    color: grey;
+}
+
+.carousel-inner{
+    display: flex;
+    margin-left: 1%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.movieItem{
+    padding: 2px;
+}
+
+.carouselSlide{
+    margin-bottom: 5%;
+}
+
+h1{
+    margin-left: 1%;
 }
