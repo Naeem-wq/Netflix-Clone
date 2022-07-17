@@ -62,11 +62,12 @@
             <!-- Slide 1 -->
             <h1 id="Popular">Popular on Netflix</h1>
 
-            <div>
-                <!-- <div v-for="(event, index) in movies">{{event.image}}</div> -->
-                <h2 v-for="(event, index) in movies">{{event.Title}}</h2>
-                <h3 v-for="(event, index) in movies">{{event.Genre}}</h3>
-                <p v-for="(event, index) in movies">{{event.Description}}</p>
+            <div v-for="(event, index) in movies">
+                <img :src="event.image" alt="Movie Images" class="movieImages">
+                <!-- <h2 >{{event.Title}}</h2>
+                <h3 >{{event.Genre}}</h3>
+                <p >{{event.Description}}</p> -->
+                <button class="addBtn">Add</button>
             </div>
 
             <!-- Slide 2 ACTION -->

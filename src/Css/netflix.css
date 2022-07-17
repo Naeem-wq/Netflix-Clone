@@ -63,6 +63,16 @@ body{
     overflow-x: scroll;
 }
 
+.movieImages{
+    display: flex;
+    margin-bottom: 1%;
+}
+
+.addBtn{
+    margin-bottom: 1%;
+    margin-left: 10%;
+}
+
 .movieItem{
     padding: 2px;
 }
