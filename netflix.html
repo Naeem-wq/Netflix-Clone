@@ -52,13 +52,7 @@
                 <ul><a href="#Kids" class="catergoryItem">Kids</a></ul>
             </div>
 
-            <!-- <div v-for="(event, index)">
-                <img :src="event.Image" alt="Movie Images">
-                <div>{{Title}}</div>
-                <div>{{event.Genre}}</div>
-                <div>{{Description}}</div>
-            </div> -->
-
+            <button id="watchlistBtn"><a href="watchlist.html" id="watchlist">Watchlist</a></button>
             <!-- Slide 1 -->
             <div class="row">
                 <h1 id="Popular">Popular on Netflix</h1>
@@ -67,10 +61,10 @@
                         <a class="movie-link">
                             <div>
                                 <img :src="event.image" alt="Movie Images" class="movieImages">
-                    <!-- <h2 >{{event.Title}}</h2>
-                <h3 >{{event.Genre}}</h3>
-                <p >{{event.Description}}</p> -->
-                                <div><button class="addBtn">Add</button></div>
+                                <!-- <h2 >{{event.Title}}</h2>
+                                <h3 >{{event.Genre}}</h3>
+                                <p >{{event.Description}}</p> -->
+                                <div><button class="addBtn" @click="addToWatchList">Add</button></div>
                             </div>
                         </a>
                     </div>
@@ -78,21 +72,76 @@
             </div>
 
             <!-- Slide 2 ACTION -->
-            <h1 id="Action">Action</h1>
+            <div class="row">
+                <h1 id="Action">Action</h1>
+                <div class="horizontalDisplayClass">
+                    <div v-for="(event, index) in movies" class="movieDisplay">
+                        <a class="movie-link">
+                            <div>
+                                <img :src="event.image" alt="Movie Images" class="movieImages">
+                                <!-- <h2 >{{event.Title}}</h2>
+                                <h3 >{{event.Genre}}</h3>
+                                <p >{{event.Description}}</p> -->
+                                <div><button class="addBtn" @click="addToWatchList">Add</button></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
             <!-- Slide 3 DRAMA -->
-            <h1 id="Drama">Drama</h1>
+            <div class="row">
+                <h1 id="Drama">Drama</h1>
+                <div class="horizontalDisplayClass">
+                    <div v-for="(event, index) in movies" class="movieDisplay">
+                        <a class="movie-link">
+                            <div>
+                                <img :src="event.image" alt="Movie Images" class="movieImages">
+                                <!-- <h2 >{{event.Title}}</h2>
+                                <h3 >{{event.Genre}}</h3>
+                                <p >{{event.Description}}</p> -->
+                                <div><button class="addBtn" @click="addToWatchList(event)">Add</button></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
             <!-- Slide 4 COMEDY -->
-            <h1 id="Comedy">Comedy</h1>
+            <div class="row">
+                <h1 id="Comedy">Comedy</h1>
+                <div class="horizontalDisplayClass">
+                    <div v-for="(event, index) in movies" class="movieDisplay">
+                        <a class="movie-link">
+                            <div>
+                                <img :src="event.image" alt="Movie Images" class="movieImages">
+                                <!-- <h2 >{{event.Title}}</h2>
+                                <h3 >{{event.Genre}}</h3>
+                                <p >{{event.Description}}</p> -->
+                                <div><button class="addBtn" @click="addToWatchList">Add</button></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
             <!-- Slide 5 KIDS -->
-            <h1 id="Kids">Kids</h1>
-
-            <button @click="moviesNames">Check Console</button>
-
-
-            <button><a href="watchlist.html">Watchlist</a></button>
+            <div class="row">
+                <h1 id="Kids">Kids</h1>
+                <div class="horizontalDisplayClass">
+                    <div v-for="(event, index) in movies" class="movieDisplay">
+                        <a class="movie-link">
+                            <div>
+                                <img :src="event.image" alt="Movie Images" class="movieImages">
+                                <!-- <h2 >{{event.Title}}</h2>
+                                <h3 >{{event.Genre}}</h3>
+                                <p >{{event.Description}}</p> -->
+                                <div><button class="addBtn" @click="addToWatchList">Add</button></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
         </div>
 

@@ -2,6 +2,7 @@ let myVue = new Vue({
   el: "#app",
 
   data: {
+    watchlist: [],
     movies: [
       {
         Title: "The Man From Toronto",
@@ -275,9 +276,23 @@ let myVue = new Vue({
     ],
   },
 
+  computed: {
+    filter(){
+
+    }
+  },
+
   methods: {
-    moviesNames() {
-      console.log("hello world");
+    addToWatchList(event) {
+      console.log("I'm Here!");
+      // Need to push the right thing
+      this.movies.push(this.watchlist)
+      console.log(this.watchlist)
     },
+
+    RemoveFromWatchList(index) {
+      this.movies.splice(index, 1);
+    },
+    
   },
 });

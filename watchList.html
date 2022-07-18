@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,185 +15,43 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <!-- Main Css -->
-    <link rel="stylesheet" href="./src/Css/who'sWatching.css">
+    <link rel="stylesheet" href="./src/Css/watchlist.css">
 
     <!-- Main Js -->
-    <script src="./src/js/watchlist.js" ></script>
+    <script src="./src/js/netflix.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-        <a href="netflix.html"><img src="./Images/netflixLogo.png" alt="netflixLogo" id="netflixLogo"></a>
-    </header>
+    <div id="app">
 
-    <main>
-        <h1>Watchlist</h1>
+        <header>
+            <a href="netflix.html"><img src="./Images/netflixLogo.png" alt="netflixLogo" id="netflixLogo"></a>
 
-                <!-- Slide 1 -->
-                <h1 id="Popular">Popular on Netflix</h1>
-                <div id="carouselExampleCaptions" class="carouselSlide" data-bs-ride="carousel">
-        
-                    <div class="carousel-inner">
-        
-                            <img src="./Images/movie1.jpg" class="movieItem" alt="The Man From Toronto">
-        
-                            <img src="./Images/movie2.jpg" class="movieItem" alt="The Umbrella Academy">
-        
-                            <img src="./Images/movie3.jpg" class="movieItem" alt="Lucifer">
-        
-                            <img src="./Images/movie4.jpg" class="movieItem" alt="Man vs Bee">
-        
-                            <img src="./Images/movie5.jpg" class="movieItem" alt="Stranger Things">
-        
-                            <img src="./Images/movie6.jpg" class="movieItem" alt="Red Notice">
-        
+            <h1 id="watchlist">Watchlist</h1>
+        </header>
+
+        <main>
+
+            <div class="row">
+                <h1 id="Kids">What are we watching?</h1>
+                <div class="horizontalDisplayClass">
+                    <div v-for="(event, index) in watchlist" class="movieDisplay">
+                        <a class="movie-link">
+                            <div>
+                                <img :src="event.image" alt="Movie Images" class="movieImages">
+                                <h2>{{event.Title}}</h2>
+                                <h3>{{event.Genre}}</h3>
+                                <p>{{event.Description}}</p>
+                                <div><button class="removeBtn" @click="RemoveFromWatchList(index)">Remove</button></div>
+                            </div>
+                        </a>
                     </div>
-        
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
-        
-        
-                <!-- Slide 2 ACTION -->
-                <h1 id="Action">Action</h1>
-                <div id="carouselExampleCaptions" class="carouselSlide" data-bs-ride="carousel">
-        
-                    <div class="carousel-inner">
-        
-                            <img src="./Images/action1.jpg" class="movieItem" alt="6 Underground">
-        
-                            <img src="./Images/action2.jpg" class="movieItem" alt="Army of the dead">
-        
-                            <img src="./Images/action3.jpg" class="movieItem" alt="Polar">
-        
-                            <img src="./Images/action4.jpg" class="movieItem" alt="Kate">
-        
-                            <img src="./Images/action5.jpg" class="movieItem" alt="Revenger">
-        
-                            <img src="./Images/action6.jpg" class="movieItem" alt="Project Power">
-        
-                    </div>
-        
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-        
-        
-                <!-- Slide 3 DRAMA -->
-                <h1 id="Drama">Drama</h1>
-                <div id="carouselExampleCaptions" class="carouselSlide" data-bs-ride="carousel">
-        
-                    <div class="carousel-inner">
-        
-                            <img src="./Images/drama1.jpg" class="movieItem" alt="Dangerous Liaisons">
-        
-                            <img src="./Images/drama2.jpg" class="movieItem" alt="The InBetween">
-        
-                            <img src="./Images/drama3.jpg" class="movieItem" alt="All Bright Places">
-        
-                            <img src="./Images/drama4.jpg" class="movieItem" alt="You Get Me">
-        
-                            <img src="./Images/drama5.jpg" class="movieItem" alt="Kidnapping Stella">
-        
-                            <img src="./Images/drama6.jpg" class="movieItem" alt="The Forest of Love">
-        
-                    </div>
-        
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-        
-        
-                <!-- Slide 4 COMEDY -->
-                <h1 id="Comedy">Comedy</h1>
-                <div id="carouselExampleCaptions" class="carouselSlide" data-bs-ride="carousel">
-        
-                    <div class="carousel-inner">
-        
-                            <img src="./Images/comedy1.jpg" class="movieItem" alt="Trailer Park Boys">
-        
-                            <img src="./Images/comedy2.jpg" class="movieItem" alt="BoJack Horesman">
-        
-                            <img src="./Images/comedy3.jpg" class="movieItem" alt="Daed to Me">
-        
-                            <img src="./Images/comedy4.jpg" class="movieItem" alt="Russian Doll">
-        
-                            <img src="./Images/comedy5.jpg" class="movieItem" alt="Crash Landing on You">
-        
-                            <img src="./Images/comedy6.jpg" class="movieItem" alt="Dear White People">
-        
-                    </div>
-        
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-        
-        
-                <!-- Slide 5 KIDS -->
-                <h1 id="Kids">Kids</h1>
-                <div id="carouselExampleCaptions" class="carouselSlide" data-bs-ride="carousel">
-        
-                    <div class="carousel-inner">
-        
-                            <img src="./Images/kids1.jpg" class="movieItem" alt="SharkDog">
-        
-                            <img src="./Images/kids2.jpg" class="movieItem" alt="Gabby's Dollhouse">
-        
-                            <img src="./Images/kids3.jpg" class="movieItem" alt="Action Pack">
-        
-                            <img src="./Images/kids4.jpg" class="movieItem" alt="Word Party">
-        
-                            <img src="./Images/kids5.jpg" class="movieItem" alt="Boss Baby">
-        
-                            <img src="./Images/kids6.jpg" class="movieItem" alt="Pup Academy">
-        
-                    </div>
-        
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-        
+            </div>
+
+    </div>
+
     </main>
 
     <!-- Vue Link that work -->
