@@ -60,14 +60,21 @@
             </div> -->
 
             <!-- Slide 1 -->
-            <h1 id="Popular">Popular on Netflix</h1>
-
-            <div v-for="(event, index) in movies">
-                <img :src="event.image" alt="Movie Images" class="movieImages">
-                <!-- <h2 >{{event.Title}}</h2>
+            <div class="row">
+                <h1 id="Popular">Popular on Netflix</h1>
+                <div class="horizontalDisplayClass">
+                    <div v-for="(event, index) in movies" class="movieDisplay">
+                        <a class="movie-link">
+                            <div>
+                                <img :src="event.image" alt="Movie Images" class="movieImages">
+                    <!-- <h2 >{{event.Title}}</h2>
                 <h3 >{{event.Genre}}</h3>
                 <p >{{event.Description}}</p> -->
-                <button class="addBtn">Add</button>
+                                <div><button class="addBtn">Add</button></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <!-- Slide 2 ACTION -->
