@@ -29,6 +29,9 @@ body {
 #signOutText {
     color: #fff;
     text-decoration: none;
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 7px 15px;
 }
 
 #trailerVideo {
@@ -123,14 +126,14 @@ h1 {
 
 .horizontalDisplayClass {
     display: flex;
-    /* overflow-y: hidden;
-    overflow-x: scroll; */
+    overflow-y: hidden;
+    overflow-x: scroll;
     padding: 15px;
 }
 
-/* .horizontalDisplayClass::-webkit-scrollbar {
+.horizontalDisplayClass::-webkit-scrollbar {
     display: none;
-} */
+}
 
 .movieImages {
     height: 80px;

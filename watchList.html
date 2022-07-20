@@ -18,12 +18,12 @@
     <link rel="stylesheet" href="./src/Css/watchlist.css">
 
     <!-- Main Js -->
-    <script src="./src/js/netflix.js" defer></script>
+    <script src="./src/js/watchList.js" defer></script>
 </head>
 
 <body>
 
-    <div id="app">
+    <div id="wacthlist">
 
         <header>
             <a href="netflix.html"><img src="./Images/netflixLogo.png" alt="netflixLogo" id="netflixLogo"></a>
@@ -34,9 +34,9 @@
         <main>
 
             <div class="row">
-                <h1 id="Kids">What are we watching?</h1>
+                <h1 id="heading">What are we watching?</h1>
                 <div class="horizontalDisplayClass">
-                    <div v-for="(event, index) in watchlist" class="movieDisplay">
+                    <div v-for="(event, index) in watchList" class="movieDisplay">
                         <a class="movie-link">
                             <div>
                                 <img :src="event.image" alt="Movie Images" class="movieImages">

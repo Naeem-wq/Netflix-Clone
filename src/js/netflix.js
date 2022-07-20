@@ -2,7 +2,6 @@ let myVue = new Vue({
   el: "#app",
 
   data: {
-    watchlist: [],
     movies: [
       {
         Title: "The Man From Toronto",
@@ -286,12 +285,8 @@ let myVue = new Vue({
     addToWatchList(event) {
       console.log("I'm Here!");
       // Need to push the right thing
-      this.movies.push(this.watchlist)
-      console.log(this.watchlist)
-    },
-
-    RemoveFromWatchList(index) {
-      this.movies.splice(index, 1);
+      // watchlist.push(this.movies)
+      console.log(this.movies)
     },
     
   },
