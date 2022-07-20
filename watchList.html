@@ -33,8 +33,11 @@
 
         <main>
 
+            <h1 id="heading">What are we watching?</h1>
+
+            <div id="clearBtn"><button id="clearWL" @click="clearWatchList">Clear Watch List</button></div>
+
             <div class="row">
-                <h1 id="heading">What are we watching?</h1>
                 <div class="horizontalDisplayClass">
                     <div v-for="(event, index) in watchList" class="movieDisplay">
                         <a class="movie-link">

@@ -52,19 +52,25 @@
                 <ul><a href="#Kids" class="catergoryItem">Kids</a></ul>
             </div>
 
+            <div class="search-box">
+                <form>
+                    <input id="searchText" v-model="searchInput.searchText" type="text"
+                        placeholder="What are you looking for?">
+                    <button id="searchButton" @click="theSearch">Search</button>
+                </form>
+            </div>
+
             <button id="watchlistBtn"><a href="watchlist.html" id="watchlist">Watchlist</a></button>
+
             <!-- Slide 1 -->
             <div class="row">
-                <h1 id="Popular">Popular on Netflix</h1>
+                <h1 id="ComingSoon">Coming Soon</h1>
                 <div class="horizontalDisplayClass">
                     <div v-for="(event, index) in movies" class="movieDisplay">
                         <a class="movie-link">
                             <div>
                                 <img :src="event.image" alt="Movie Images" class="movieImages">
-                                <!-- <h2 >{{event.Title}}</h2>
-                                <h3 >{{event.Genre}}</h3>
-                                <p >{{event.Description}}</p> -->
-                                <div><button class="addBtn" @click="addToWatchList">Add</button></div>
+                                <div><button class="addBtn" @click="addToWatchList(event)">Add</button></div>
                             </div>
                         </a>
                     </div>
@@ -79,9 +85,6 @@
                         <a class="movie-link">
                             <div>
                                 <img :src="event.image" alt="Movie Images" class="movieImages">
-                                <!-- <h2 >{{event.Title}}</h2>
-                                <h3 >{{event.Genre}}</h3>
-                                <p >{{event.Description}}</p> -->
                                 <div><button class="addBtn" @click="addToWatchList">Add</button></div>
                             </div>
                         </a>
@@ -97,9 +100,6 @@
                         <a class="movie-link">
                             <div>
                                 <img :src="event.image" alt="Movie Images" class="movieImages">
-                                <!-- <h2 >{{event.Title}}</h2>
-                                <h3 >{{event.Genre}}</h3>
-                                <p >{{event.Description}}</p> -->
                                 <div><button class="addBtn" @click="addToWatchList(event)">Add</button></div>
                             </div>
                         </a>
@@ -115,9 +115,6 @@
                         <a class="movie-link">
                             <div>
                                 <img :src="event.image" alt="Movie Images" class="movieImages">
-                                <!-- <h2 >{{event.Title}}</h2>
-                                <h3 >{{event.Genre}}</h3>
-                                <p >{{event.Description}}</p> -->
                                 <div><button class="addBtn" @click="addToWatchList">Add</button></div>
                             </div>
                         </a>
@@ -133,9 +130,6 @@
                         <a class="movie-link">
                             <div>
                                 <img :src="event.image" alt="Movie Images" class="movieImages">
-                                <!-- <h2 >{{event.Title}}</h2>
-                                <h3 >{{event.Genre}}</h3>
-                                <p >{{event.Description}}</p> -->
                                 <div><button class="addBtn" @click="addToWatchList">Add</button></div>
                             </div>
                         </a>

@@ -2,10 +2,17 @@ let myVue = new Vue({
   el: "#app",
 
   data: {
+    searchInput: {
+      searchText: "",
+    },
+    searched: false,
+    InList: false,
+    fullList: false,
+
     movies: [
       {
         Title: "The Man From Toronto",
-        Genre: "Popular on Netflix | Action",
+        Genre: "Coming Soon",
         Description:
           "A case of mistaken identity forces a bumbling entrepreneur to team up with a notorious assassin known as The Man from Toronto in hopes of staying alive.",
         image:
@@ -14,7 +21,7 @@ let myVue = new Vue({
 
       {
         Title: "The Umbrella Academy",
-        Genre: "Popular on Netflix | Action",
+        Genre: "Coming Soon",
         Description:
           "Reunited by their father's death, estranged siblings with extraordinary powers uncover shocking family secrets -- and a looming threat to humanity.",
         image:
@@ -23,7 +30,7 @@ let myVue = new Vue({
 
       {
         Title: "Lucifer",
-        Genre: "Popular on Netflix | Action",
+        Genre: "Coming Soon",
         Description:
           "Bored with being the Lord of Hell, the devil relocates to Los Angeles, where he opens a nightclub and forms a connection with a homicide detective.",
         image:
@@ -32,7 +39,7 @@ let myVue = new Vue({
 
       {
         Title: "Man vs Bee",
-        Genre: "Popular on Netflix | Comedy",
+        Genre: "Coming Soon",
         Description:
           "Bumbling dad Trevor tries to get the best of a cunning bee while house-sitting a posh mansion — but only unleashes more chaos in this comedy series.",
         image:
@@ -41,7 +48,7 @@ let myVue = new Vue({
 
       {
         Title: "Stranger Things",
-        Genre: "Popular on Netflix | Thriller",
+        Genre: "Coming Soon",
         Description:
           "Terror reigns in the food court when the Mind Flayer comes to collect. But down below, in the dark, the future of the world is at stake.",
         image:
@@ -50,7 +57,7 @@ let myVue = new Vue({
 
       {
         Title: "Red Notice",
-        Genre: "Popular on Netflix | Action",
+        Genre: "Coming Soon",
         Description:
           "An FBI profiler pursuing the world's most wanted art thief becomes his reluctant partner in crime to catch an elusive crook who's always one step ahead.",
         image:
@@ -225,7 +232,7 @@ let myVue = new Vue({
         Description:
           "He's a cute puppy and a hungry underwater hunter! And Sharkdog's friendship with human pal Max is full of fun!",
         image:
-         "https://occ-0-2640-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVP9qqoHBbTCadDjCb4m4dOYVqo9mBwf8j4LFbDBYrK_zUqr9cKI5SsHiWNUnvxG1k8xdEUbXm9YpMLrLfweJNSAQrQ3cGdcvzf2ilRHlijndNol_Gb6kKBnGjynTXtYrI4OJ3uNFmfMPZy3HhuNfN-Pz62x5pzQPa7GFg.jpg?r=dc7" ,
+          "https://occ-0-2640-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVP9qqoHBbTCadDjCb4m4dOYVqo9mBwf8j4LFbDBYrK_zUqr9cKI5SsHiWNUnvxG1k8xdEUbXm9YpMLrLfweJNSAQrQ3cGdcvzf2ilRHlijndNol_Gb6kKBnGjynTXtYrI4OJ3uNFmfMPZy3HhuNfN-Pz62x5pzQPa7GFg.jpg?r=dc7",
       },
 
       {
@@ -270,24 +277,44 @@ let myVue = new Vue({
         Description:
           "Furry friends take a re-bark-able journey in this series about an extraordinary school for the cutest, cuddliest and most curious puppies.",
         image:
-        "https://occ-0-2640-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdjg7-JzKyFNwMHvcyR7FC7kNNxqOzcU9q_LssYgXzx5RzAkbYqeuIgHXTV6aNdpM__1_sMUIr_Wzy-N20IOPVSAZbXPO5b1ZayBw3QwgxNAQQqew8NTgs4fMofjzwRYuc9x.jpg?r=7ca",
+          "https://occ-0-2640-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdjg7-JzKyFNwMHvcyR7FC7kNNxqOzcU9q_LssYgXzx5RzAkbYqeuIgHXTV6aNdpM__1_sMUIr_Wzy-N20IOPVSAZbXPO5b1ZayBw3QwgxNAQQqew8NTgs4fMofjzwRYuc9x.jpg?r=7ca",
       },
     ],
   },
 
-  computed: {
-    filter(){
-
-    }
-  },
+  computed: {},
 
   methods: {
-    addToWatchList(event) {
-      console.log("I'm Here!");
-      // Need to push the right thing
-      // watchlist.push(this.movies)
-      console.log(this.movies)
+    theSearch() {
+      let input = document.getElementById("searchText").value;
+      if (input === "") {
+        alert("Enter Some Text");
+      } else {
+        this.searched = !this.searched;
+      }
     },
-    
+
+    addToWatchList(event) {
+      let watchList = JSON.parse(localStorage.getItem("Movies"));
+      for (let i = 0; i < watchList.length; i++) {
+        if (watchList[i].Title == event.Title) {
+          this.InList = true;
+        } else {
+          this.InList = false;
+        }
+      }
+
+      if (this.InList == true) {
+      } else {
+        if (watchList.length < 20) {
+          watchList.push(event);
+
+          localStorage.setItem("Movies", JSON.stringify(watchList));
+        } else if (watchList.length >= 20) {
+          this.fullList = true;
+          alert("Watch List Full!");
+        }
+      }
+    },
   },
 });

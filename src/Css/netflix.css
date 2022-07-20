@@ -57,6 +57,38 @@ body {
     margin-top: 1%;
 }
 
+.search-box{
+    text-align: center;
+    margin-top: 2%;
+}
+
+#searchText{
+    border: none;
+    color: white;
+    background-color: #303437;
+    font-size: 15px;
+    padding: 12px 200px;
+    border-radius: 4px;
+}
+
+#searchText::placeholder {
+    color: #f3f3f3;
+}
+
+#searchButton {
+    background-color: #e50914;
+    border-radius: 4px;
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#searchButton:hover{
+    background-color: rgb(188, 31, 31);
+}
+
 #watchlistBtn {
     background-color: #e50914;
     border-radius: 4px;
