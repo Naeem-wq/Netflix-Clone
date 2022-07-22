@@ -263,10 +263,10 @@ let myVue = new Vue({
       },
 
       {
-        Title: "Cocomelon",
+        Title: "CoComelon",
         Genre: "Kids",
         Description:
-          "It's time to sing along with J.J. and the gang! This kid-friendly playlist includes 'Wheels on the Bus,' 'Hey Diddle Diddle,' 'This Is the Way' and more.",
+          "It's time to sing along with J.J. and the gang! This kid-friendly playlist includes Wheels on the Bus, Hey Diddle Diddle, This Is the Way and more.",
         image:
           "https://occ-0-2640-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVTLQW4E66om9Ejo3j384uZvjdWRciwUMUCQPnxNUCPu3DfR3AXD5_B4k7xUVNmBw1FMSg8IRf8bm5CpjVcx2L44WzHTcC0jqoVrgoTvTG8w9685FyMPrM15n7LOoE69XNm44AU7wWqi-PTCpwV7Waw5Zxw8-MRjQ4Q.webp?r=edd",
       },
