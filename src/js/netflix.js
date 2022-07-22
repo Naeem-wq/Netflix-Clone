@@ -11,6 +11,15 @@ let myVue = new Vue({
 
     movies: [
       {
+        Title: "Peaky Blinders",
+        Genre: "Coming Soon",
+        Description:
+          "A notorious gang in 1919 Birmingham, England, is led by the fierce Tommy Shelby, a crime boss set on moving up in the world no matter the cost.",
+        image:
+          "https://occ-0-2640-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcSnkLOZxSQNMSfboSbQ533q6KTZUccNtDXq1TgmziR6IscSONhyv78kTVq1nO5oG5PelDAbRICxptavShNm7y2F-Ou0maE8TUTGE1rJCa_2NltTItgghZSAP0m_Ryhu5eQF.jpg?r=777",
+      },
+
+      {
         Title: "The Man From Toronto",
         Genre: "Coming Soon",
         Description:
@@ -74,6 +83,15 @@ let myVue = new Vue({
       },
 
       {
+        Title: "Anaconda",
+        Genre: "Action",
+        Description:
+          "A documentary film crew on a boat in the Amazon picks up a mysterious stranger who dupes them into pursuing a monstrous and deadly 40-foot-long snake.",
+        image:
+          "https://occ-0-2640-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABW7LtjWNq_3stuNO4P0dbER0MrVXzg-SI3QIUoBDKWJ-I1ihZaPRBODllJg8sg4_zPGQ4iX47LyqUc0eMzdcJDKzxrp8gTkvqmU.webp?r=487",
+      },
+
+      {
         Title: "Army of the dead",
         Genre: "Action",
         Description:
@@ -116,6 +134,15 @@ let myVue = new Vue({
           "An ex-soldier, a teen and a cop collide in New Orleans as they hunt for the source behind a dangerous new pill that grants users temporary superpowers.",
         image:
           "https://occ-0-2640-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABT3-8qznDgNGOJpVLZQp5zqfkkObG8EYjMWVP-tlhIB3i_rUVSxAB8X1ng4MDZ4SnGbBR-5349Vdb9GaJtOZBAkbQkNsAYuA6iNiqmNvOF1WaaEik55kVYwqcy7asbDYGW3_.jpg?r=2ba",
+      },
+
+      {
+        Title: "Fatherhood",
+        Genre: "Drama",
+        Description:
+          "A widowed new dad copes with doubts, fears, heartache and dirty diapers as he sets out to raise his daughter on his own. Inspired by a true story.",
+        image:
+          "https://occ-0-2640-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRjWCqHZ4dXw_7AKrt5lpBYg4_sAnJyRiM7JQTxXaNA_HHDIuhJXJpauw3FCxEsgI5Fn2FaieuFAlHB__YNv8JA79nG3PumIglMJ5JyvNy9h60VS8sSJsXtWmyy_SGrBefpq.jpg?r=182",
       },
 
       {
@@ -173,6 +200,15 @@ let myVue = new Vue({
       },
 
       {
+        Title: "Kangaroo Jack",
+        Genre: "Comedy",
+        Description:
+          "Two boyhood pals sent to Australia to deliver $50,000 of mob money are forced to pursue a runaway kangaroo when the critter runs off with the cash.",
+        image:
+          "https://occ-0-2640-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABWc50wcCBcZdOt-PWHdvBxaW9HyAznlldWsBuIXU1i7CsxRUXA7-Ta-qgKTbqugf_TQl7nIquy6YrkbsR52IIqPuB759orksULA.webp?r=a77",
+      },
+
+      {
         Title: "Trailer Park Boys",
         Genre: "Comedy",
         Description:
@@ -224,6 +260,15 @@ let myVue = new Vue({
           "Students of color navigate the daily slights and slippery politics of life at an Ivy League college that's not nearly as 'post-racial' as it thinks.",
         image:
           "https://occ-0-2640-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRCh9RbpAOfJuQqXCoxK6IYCXSy01RNhn338o0RT54Wz_6ZTcGd3jHPLKiDGaHZTJUrJ9TNUeEgDvCjK6i02ZDT-lcZHRUL0dOmyBgWv5kSaCrS59qX2-7uCXtI_Ov7_Eu9v.jpg?r=f96",
+      },
+
+      {
+        Title: "Cocomelon",
+        Genre: "Kids",
+        Description:
+          "It's time to sing along with J.J. and the gang! This kid-friendly playlist includes 'Wheels on the Bus,' 'Hey Diddle Diddle,' 'This Is the Way' and more.",
+        image:
+          "https://occ-0-2640-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVTLQW4E66om9Ejo3j384uZvjdWRciwUMUCQPnxNUCPu3DfR3AXD5_B4k7xUVNmBw1FMSg8IRf8bm5CpjVcx2L44WzHTcC0jqoVrgoTvTG8w9685FyMPrM15n7LOoE69XNm44AU7wWqi-PTCpwV7Waw5Zxw8-MRjQ4Q.webp?r=edd",
       },
 
       {
@@ -282,14 +327,66 @@ let myVue = new Vue({
     ],
   },
 
-  computed: {},
+  computed: {
+    filteredMoviesTitle() {
+      let filteredMoviesTitle = this.movies.filter((movie) => {
+        return movie.Title.toLowerCase().includes(
+          this.searchInput.searchText.toLowerCase()
+        );
+      });
+
+      return filteredMoviesTitle;
+    },
+
+    filteredMoviesComingSoon() {
+      let filteredMoviesComingSoon = this.movies.filter((movie) => {
+        return movie.Genre.toLowerCase().includes("Coming Soon".toLowerCase());
+      });
+
+      return filteredMoviesComingSoon;
+    },
+
+    filteredMoviesAction() {
+      let filteredMoviesAction = this.movies.filter((movie) => {
+        return movie.Genre.toLowerCase().includes("Action".toLowerCase());
+      });
+
+      return filteredMoviesAction;
+    },
+
+    filteredMoviesDrama() {
+      let filteredMoviesDrama = this.movies.filter((movie) => {
+        return movie.Genre.toLowerCase().includes("Drama".toLowerCase());
+      });
+
+      return filteredMoviesDrama;
+    },
+
+    filteredMoviesComedy() {
+      let filteredMoviesComedy = this.movies.filter((movie) => {
+        return movie.Genre.toLowerCase().includes("Comedy".toLowerCase());
+      });
+
+      return filteredMoviesComedy;
+    },
+
+    filteredMoviesKids() {
+      let filteredMoviesKids = this.movies.filter((movie) => {
+        return movie.Genre.toLowerCase().includes("Kids".toLowerCase());
+      });
+
+      return filteredMoviesKids;
+    },
+  },
 
   methods: {
     theSearch() {
       let input = document.getElementById("searchText").value;
       if (input === "") {
         alert("Enter Some Text");
-      } else {
+        this.searched = this.searched;
+      }
+      else {
         this.searched = !this.searched;
       }
     },

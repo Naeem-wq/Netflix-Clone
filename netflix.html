@@ -55,18 +55,36 @@
             <div class="search-box">
                 <form>
                     <input id="searchText" v-model="searchInput.searchText" type="text"
-                        placeholder="What are you looking for?">
-                    <button id="searchButton" @click="theSearch">Search</button>
+                        placeholder="What are you looking for?" >
+                    <input type="button" value="Search" id="searchButton" @click="theSearch">
                 </form>
             </div>
 
             <button id="watchlistBtn"><a href="watchlist.html" id="watchlist">Watchlist</a></button>
 
+            <!-- Movies that are being searched Slide -->
+            <div v-show="!searched" class="row">
+                <span></span>
+            </div>
+
+            <!-- Template for searched movie slide -->
+            <div v-show="searched" class="row">
+                <h1>We Searched For:</h1>
+                <div class="searchedDisplay">
+                    <div v-for="(event, index) in filteredMoviesTitle" >
+                        <div class="searchDisplayMovies">
+                            <img :src="event.image" alt="Movie Images" >
+                            <div><button class="addBtn" @click="addToWatchList(event)">Add</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Slide 1 -->
             <div class="row">
                 <h1 id="ComingSoon">Coming Soon</h1>
                 <div class="horizontalDisplayClass">
-                    <div v-for="(event, index) in movies" class="movieDisplay">
+                    <div v-for="(event, index) in filteredMoviesComingSoon" class="movieDisplay">
                         <a class="movie-link">
                             <div>
                                 <img :src="event.image" alt="Movie Images" class="movieImages">
@@ -81,7 +99,7 @@
             <div class="row">
                 <h1 id="Action">Action</h1>
                 <div class="horizontalDisplayClass">
-                    <div v-for="(event, index) in movies" class="movieDisplay">
+                    <div v-for="(event, index) in filteredMoviesAction" class="movieDisplay">
                         <a class="movie-link">
                             <div>
                                 <img :src="event.image" alt="Movie Images" class="movieImages">
@@ -96,7 +114,7 @@
             <div class="row">
                 <h1 id="Drama">Drama</h1>
                 <div class="horizontalDisplayClass">
-                    <div v-for="(event, index) in movies" class="movieDisplay">
+                    <div v-for="(event, index) in filteredMoviesDrama" class="movieDisplay">
                         <a class="movie-link">
                             <div>
                                 <img :src="event.image" alt="Movie Images" class="movieImages">
@@ -111,7 +129,7 @@
             <div class="row">
                 <h1 id="Comedy">Comedy</h1>
                 <div class="horizontalDisplayClass">
-                    <div v-for="(event, index) in movies" class="movieDisplay">
+                    <div v-for="(event, index) in filteredMoviesComedy" class="movieDisplay">
                         <a class="movie-link">
                             <div>
                                 <img :src="event.image" alt="Movie Images" class="movieImages">
@@ -126,7 +144,7 @@
             <div class="row">
                 <h1 id="Kids">Kids</h1>
                 <div class="horizontalDisplayClass">
-                    <div v-for="(event, index) in movies" class="movieDisplay">
+                    <div v-for="(event, index) in filteredMoviesKids" class="movieDisplay">
                         <a class="movie-link">
                             <div>
                                 <img :src="event.image" alt="Movie Images" class="movieImages">

@@ -60,6 +60,7 @@ body {
 .search-box{
     text-align: center;
     margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 #searchText{
@@ -106,6 +107,33 @@ body {
 
 #watchlistBtn:hover {
     background-color: rgb(188, 31, 31);
+}
+
+.searchedDisplay{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 15px;
+}
+
+.searchedDisplay::-webkit-scrollbar {
+    display: none;
+}
+
+.searchDisplayMovies{
+    background-color: rgb(48, 48, 48);
+    border-radius: 4px;
+    width: 250px;
+    margin: 5px;
+}
+
+.searchDisplayMovies:hover {
+    transform: scale(1.1);
+}
+
+.searchDisplayMovies img {
+    width: 251px;
+    height: 150px;
 }
 
 .catergoryItem:hover {
