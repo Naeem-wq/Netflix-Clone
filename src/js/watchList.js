@@ -15,8 +15,11 @@ const secondVue = new Vue({
         
         RemoveFromWatchList(index) {
             this.watchList.splice(index, 1);
-            // localStorage.removeItem(this.watchList[0]);
-          },
+
+            localStorage.setItem("Movies", JSON.stringify(this.watchList)); 
+            this.watchList = JSON.parse(localStorage.getItem("Movies"))
+            
+              }
     },
 
     mounted() {
