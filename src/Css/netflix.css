@@ -37,7 +37,8 @@ body {
 #trailerVideo {
     width: 100%;
     height: 80vh;
-    background-image: url("/Images/videoImage.jpeg");
+    background-image: url("/src/Images/videoImage.jpeg");
+    background-position: center center;
 }
 
 .catergories {
