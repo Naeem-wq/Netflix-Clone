@@ -385,8 +385,7 @@ let myVue = new Vue({
       if (input === "") {
         alert("Enter Some Text");
         this.searched = this.searched;
-      }
-      else {
+      } else {
         this.searched = !this.searched;
       }
     },

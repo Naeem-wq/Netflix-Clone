@@ -39,12 +39,14 @@ body {
     height: 80vh;
     background-image: url("/src/Images/videoImage.jpeg");
     background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .catergories {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 2em;
 }
 
@@ -58,13 +60,13 @@ body {
     margin-top: 1%;
 }
 
-.search-box{
+.search-box {
     text-align: center;
     margin-top: 2%;
     margin-bottom: 2%;
 }
 
-#searchText{
+#searchText {
     border: none;
     color: white;
     background-color: #303437;
@@ -87,7 +89,7 @@ body {
     font-weight: bolder;
 }
 
-#searchButton:hover{
+#searchButton:hover {
     background-color: rgb(188, 31, 31);
 }
 
@@ -110,18 +112,17 @@ body {
     background-color: rgb(188, 31, 31);
 }
 
-.searchedDisplay{
+.searchedDisplay {
     display: flex;
-    overflow-y: hidden;
     overflow-x: scroll;
     padding: 15px;
 }
 
 .searchedDisplay::-webkit-scrollbar {
-    display: none;
+    opacity: 50%;
 }
 
-.searchDisplayMovies{
+.searchDisplayMovies {
     background-color: rgb(48, 48, 48);
     border-radius: 4px;
     width: 250px;
@@ -162,7 +163,6 @@ h1 {
     margin-left: 1.5%;
 }
 
-
 .movieDisplay {
     background-color: rgb(48, 48, 48);
     border-radius: 4px;
@@ -198,4 +198,50 @@ h1 {
 .movieImages {
     height: 80px;
     width: 100px;
+}
+
+.footerImg {
+    width: 500px;
+}
+
+.pictureEl {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3%;
+}
+
+@media screen and (max-width: 425px) {
+
+    .footerImg {
+        width: 250px;
+    }
+
+}
+
+@media screen and (max-width: 590px) {
+    #searchText {
+        padding: 12px 80px;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    #searchText {
+        padding: 12px 150px;
+    }
+
+    .footerImg {
+        width: 400px;
+    }
+
+    .pictureEl {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 3%;
+    }
+
 }

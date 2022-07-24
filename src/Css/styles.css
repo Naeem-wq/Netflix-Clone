@@ -1,18 +1,20 @@
-*{box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
-body{
+body {
     margin: 0%;
     background-color: rgb(29, 27, 27);
     color: #fff;
     width: 100%;
     height: 100%;
-    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-image: url("/src/Images/netflixBackground.jpg");
     background-repeat: no-repeat;
     background-blend-mode: soft-light;
 }
 
-.container::before{
+.container::before {
     content: "";
     position: absolute;
     height: 100%;
@@ -20,28 +22,33 @@ body{
     opacity: 0.3;
     z-index: -1;
 }
-.container .navbar{
+
+.container .navbar {
     height: 100px;
     display: flex;
 }
-.container .navbar .left{
+
+.container .navbar .left {
     height: 100%;
     display: flex;
     float: left;
 }
-.container .navbar .left img{
-    width:180px;
+
+.container .navbar .left img {
+    width: 180px;
     margin: 30px;
     position: absolute;
 }
-.container .navbar .right{
+
+.container .navbar .right {
     display: flex;
     height: 100px;
     float: right;
     position: absolute;
     right: 50px;
 }
-.container .navbar .right .language{
+
+.container .navbar .right .language {
     margin: auto;
     align-items: center;
     justify-content: center;
@@ -52,10 +59,12 @@ body{
     cursor: pointer;
     margin-right: 15px;
 }
-.container .navbar .right .language option{
+
+.container .navbar .right .language option {
     background-color: grey;
 }
-.container .navbar .right button{
+
+.container .navbar .right button {
     margin: auto;
     align-items: center;
     justify-content: center;
@@ -68,40 +77,48 @@ body{
     border-radius: 4px;
     border: none;
 }
-.container .navbar .right button a{
+
+.container .navbar .right button a {
     text-decoration: none;
     color: white;
 }
-.container .title{
+
+.container .title {
     padding: 70px 45px;
 }
-.container .title .content{
+
+.container .title .content {
     width: auto;
     padding: 75px 0;
     text-align: center;
 }
-.container .title .content h1{
+
+.container .title .content h1 {
     text-align: center;
     width: auto;
     margin: auto;
     font-size: 3.1rem;
     text-align: center;
 }
-.container .title .content h2{
+
+.container .title .content h2 {
     width: auto;
     margin: auto;
     font-size: 1.6rem;
     text-align: center;
 }
-.container .title .content form h3{
+
+.container .title .content form h3 {
     font-size: 1rem;
     margin: 18px 0;
     text-align: center;
 }
-.container .title .content form .email{
+
+.container .title .content form .email {
     width: auto;
 }
-.container .title .content form .email input{
+
+.container .title .content form .email input {
     height: 60px;
     width: 450px;
     margin: auto;
@@ -109,7 +126,8 @@ body{
     font-size: 20px;
     outline: none;
 }
-.container .title .content form .email button{
+
+.container .title .content form .email button {
     margin: auto;
     height: 60px;
     width: 180px;
@@ -125,10 +143,12 @@ body{
     border: none;
     margin-left: -5px;
 }
-.container .title .content form .email button:hover{
+
+.container .title .content form .email button:hover {
     background-color: #f40612;
 }
-.container .title .content form .email button a{
+
+.container .title .content form .email button a {
     text-decoration: none;
     color: white;
 }

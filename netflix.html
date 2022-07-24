@@ -15,7 +15,7 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <!-- Main Css -->
-    <link rel="stylesheet" href="./src/Css/netflix.css">
+    <link rel="stylesheet" href="./src/css/netflix.css">
 
     <!-- Main Js -->
     <script src="./src/js/netflix.js" defer></script>
@@ -25,17 +25,18 @@
 
 <body>
 
-    <header>
-        <a href="netflix.html">
-            <img src="./src/Images/netflixLogo.png" alt="netflixLogo" id="netflixLogo"></a>
+    <div id="app">
+        <header>
+            <a href="netflix.html">
+                <img src="./src/Images/netflixLogo.png" alt="netflixLogo" id="netflixLogo"></a>
 
-        <button id="signOut"><a href="index.html" id="signOutText">Sign Out</a>
-        </button>
-    </header>
+            <button id="signOut"><a href="index.html" id="signOutText">Sign Out</a>
+            </button>
+        </header>
 
-    <main>
+        <main>
 
-        <div id="app">
+            <!-- Youtube trailer Video -->
             <div class="trailer">
                 <iframe src="https://www.youtube.com/embed/GN_IwBptKi4?autoplay=0&controls=0&modestbranding=1"
                     title="Day Shift | Jamie Foxx, Dave Franco, and Snoop Dogg | Official Trailer | Netflix"
@@ -44,6 +45,7 @@
                     id="trailerVideo"></iframe>
             </div>
 
+            <!-- Links to Genre Catergory -->
             <div class="catergories">
                 <ul><a href="#Popular" class="catergoryItem">Popular on Netflix</a></ul>
                 <ul><a href="#Action" class="catergoryItem">Action</a></ul>
@@ -52,14 +54,16 @@
                 <ul><a href="#Kids" class="catergoryItem">Kids</a></ul>
             </div>
 
+            <!-- Searchbox -->
             <div class="search-box">
                 <form>
                     <input id="searchText" v-model="searchInput.searchText" type="text"
-                        placeholder="What are you looking for?" >
+                        placeholder="What are you looking for?">
                     <input type="button" value="Search" id="searchButton" @click="theSearch">
                 </form>
             </div>
 
+            <!-- Button to Watch list -->
             <button id="watchlistBtn"><a href="watchlist.html" id="watchlist">Watchlist</a></button>
 
             <!-- Movies that are being searched Slide -->
@@ -71,9 +75,9 @@
             <div v-show="searched" class="row">
                 <h1>We Searched For:</h1>
                 <div class="searchedDisplay">
-                    <div v-for="(event, index) in filteredMoviesTitle" >
+                    <div v-for="(event, index) in filteredMoviesTitle">
                         <div class="searchDisplayMovies">
-                            <img :src="event.image" alt="Movie Images" >
+                            <img :src="event.image" alt="Movie Images">
                             <div><button class="addBtn" @click="addToWatchList(event)">Add</button></div>
                         </div>
                     </div>
@@ -154,10 +158,41 @@
                     </div>
                 </div>
             </div>
+        </main>
 
-        </div>
+        <footer>
 
-    </main>
+            <div class="pictureEl">
+                <div>
+                    <picture>
+                        <source media="(min-width: 900px)" srcset="./src/Images/footerBg2.jpg" class="footerImg">
+                        <source media="(min-width: 768px)" srcset="./src/Images/footerBg1.jpg" class="footerImg">
+                        <img src="./src/Images/footerBg.jpg" alt="Netflix Image" class="footerImg">
+                    </picture>
+                </div>
+
+                <!-- Info On The Company -->
+                <div>
+                    <h3>Netflix, Inc. is an American subscription streaming service and production company. Launched on
+                        August 29, 1997, it offers a film and television series library through distribution deals as
+                        well as its own productions, known as Netflix Originals. </h3>
+
+                    <h4>Founded:</h4>
+                    <p>29 August 1997</p>
+
+                    <h4>Founders: </h4>
+                    <p>Reed Hastings, Marc Randolph</p>
+
+                    <h4>CEO: </h4>
+                    <p>Reed Hastings (Sept 1998–) , Ted Sarandos (14 Jul 2020–)</p>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
 
     <!-- Vue Links that work -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>

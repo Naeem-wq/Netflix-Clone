@@ -15,7 +15,7 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <!-- Main Css -->
-    <link rel="stylesheet" href="./src/Css/watchlist.css">
+    <link rel="stylesheet" href="./src/css/watchlist.css">
 
     <!-- Main Js -->
     <script src="./src/js/watchList.js" defer></script>
@@ -39,7 +39,7 @@
 
             <div class="row">
                 <div v-for="(event, index) in watchList" class="movieDisplay">
-                    <div class="card" >
+                    <div class="card">
                         <img :src="event.image" class="card-img-top" alt="Movie Images">
                         <div class="card-body">
 
@@ -47,7 +47,8 @@
                             <h4 class="movieDetails">{{event.Genre}}</h4>
                             <p class="movieDescription">{{event.Description}}</p>
 
-                            <div class="remove"><button class="removeBtn" @click="RemoveFromWatchList(index)">Remove</button>
+                            <div class="remove"><button class="removeBtn"
+                                    @click="RemoveFromWatchList(index)">Remove</button>
                             </div>
                         </div>
                     </div>

@@ -14,18 +14,36 @@ body {
     opacity: 60%;
 }
 
-#watchlist{
+#watchlist {
     font-size: 40px;
     text-align: center;
     color: #fff;
 }
 
-#heading{
+#heading {
     text-align: center;
     color: #fff;
+    animation: heading 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
-#clearWL{
+@keyframes heading {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
+
+
+#clearWL {
     background-color: #e50914;
     border-radius: 4px;
     border: none;
@@ -36,52 +54,53 @@ body {
     font-weight: bolder;
 }
 
-#clearWL:hover{
+#clearWL:hover {
     background-color: rgb(188, 31, 31);
 }
 
-#clearBtn{
+#clearBtn {
     text-align: right;
     margin-right: 5%;
 }
 
-.remove{
+.remove {
     display: flex;
     justify-content: center;
 }
 
-.removeBtn{
+.removeBtn {
     background-color: #e50914;
     border-radius: 4px;
     border: none;
     padding: 7px 15px;
-    margin-bottom:6%;
+    margin-bottom: 6%;
     color: #fff;
     font-size: 18px;
     font-weight: bolder;
 }
 
-.removeBtn:hover{
+.removeBtn:hover {
     background-color: rgb(188, 31, 31);
 }
 
-.card{
+.card {
     color: #fff;
     width: 21.35rem;
     height: 28rem;
     margin: 6%;
     background-color: #433b3b;
+    border-radius: 10px;
 }
 
-.movieDetails{
+.movieDetails {
     margin-left: 5%;
 }
 
-.movieDescription{
+.movieDescription {
     margin-left: 5%;
 }
 
-.row{
+.row {
     display: grid;
     grid-template-columns: repeat(4, 20rem);
     gap: 3.5rem;

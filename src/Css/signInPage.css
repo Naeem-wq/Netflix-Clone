@@ -16,7 +16,7 @@ body {
     margin: 20px;
 }
 
-.loginForm{
+.loginForm {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,7 +73,7 @@ body {
     cursor: pointer;
 }
 
-.login__sign-in:hover{
+.login__sign-in:hover {
     background-color: rgb(188, 31, 31);
 }
 
@@ -83,7 +83,7 @@ body {
     font-size: 1.2rem;
 }
 
-#signInText:visited{
+#signInText:visited {
     color: #fff;
 }
 
