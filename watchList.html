@@ -38,17 +38,18 @@
             <div id="clearBtn"><button id="clearWL" @click="clearWatchList">Clear Watch List</button></div>
 
             <div class="row">
-                <div class="horizontalDisplayClass">
-                    <div v-for="(event, index) in watchList" class="movieDisplay">
-                        <a class="movie-link">
-                            <div>
-                                <img :src="event.image" alt="Movie Images" class="movieImages">
-                                <h2>{{event.Title}}</h2>
-                                <h3>{{event.Genre}}</h3>
-                                <p>{{event.Description}}</p>
-                                <div><button class="removeBtn" @click="RemoveFromWatchList(index)">Remove</button></div>
+                <div v-for="(event, index) in watchList" class="movieDisplay">
+                    <div class="card" >
+                        <img :src="event.image" class="card-img-top" alt="Movie Images">
+                        <div class="card-body">
+
+                            <h1 class="movieDetails">{{event.Title}}</h1>
+                            <h4 class="movieDetails">{{event.Genre}}</h4>
+                            <p class="movieDescription">{{event.Description}}</p>
+
+                            <div class="remove"><button class="removeBtn" @click="RemoveFromWatchList(index)">Remove</button>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>

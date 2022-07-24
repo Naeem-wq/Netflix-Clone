@@ -5,7 +5,6 @@
 body {
     margin: 0%;
     background-color: rgb(29, 27, 27);
-    color: #fff;
 }
 
 #netflixLogo {
@@ -18,10 +17,12 @@ body {
 #watchlist{
     font-size: 40px;
     text-align: center;
+    color: #fff;
 }
 
 #heading{
     text-align: center;
+    color: #fff;
 }
 
 #clearWL{
@@ -29,7 +30,7 @@ body {
     border-radius: 4px;
     border: none;
     padding: 7px 15px;
-    margin: 1% 0%;
+    margin: 1% 0% 3%;
     color: #fff;
     font-size: 18px;
     font-weight: bolder;
@@ -42,6 +43,11 @@ body {
 #clearBtn{
     text-align: right;
     margin-right: 5%;
+}
+
+.remove{
+    display: flex;
+    justify-content: center;
 }
 
 .removeBtn{
@@ -59,6 +65,24 @@ body {
     background-color: rgb(188, 31, 31);
 }
 
+.card{
+    color: #fff;
+    width: 21.35rem;
+    height: 28rem;
+    margin: 6%;
+    background-color: #433b3b;
+}
+
+.movieDetails{
+    margin-left: 5%;
+}
+
+.movieDescription{
+    margin-left: 5%;
+}
+
 .row{
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 20rem);
+    gap: 3.5rem;
 }

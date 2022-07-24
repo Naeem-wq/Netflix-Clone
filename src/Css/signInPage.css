@@ -16,10 +16,15 @@ body {
     margin: 20px;
 }
 
+.loginForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .login {
     display: flex;
     flex-direction: column;
-    margin-left: 38%;
     background: rgba(0, 0, 0, .75);
     border-radius: 4px;
     width: 400px;
@@ -68,6 +73,10 @@ body {
     cursor: pointer;
 }
 
+.login__sign-in:hover{
+    background-color: rgb(188, 31, 31);
+}
+
 #signInText {
     text-decoration: none;
     color: #fff;
@@ -79,8 +88,8 @@ body {
 }
 
 .login__secondary-cta {
-    position: relative;
-    z-index: 100;
+    /* position: relative;
+    z-index: 100; */
     display: flex;
     justify-content: space-between;
 }

@@ -3,20 +3,38 @@
 body{
     margin: 0%;
     background-color: rgb(29, 27, 27);
-    color: #fff;
 }
 
 #netflixLogo{
     width: 150px;
     margin: 20px;
 }
+.title{
+    text-align: center;
+    margin-top: 6%;
+    color: #fff;
+}
 
-#profilePicture{
-    height: 100px;
+.profilePicture{
+    height: 150px;
     text-align: center;
 }
 
-.title{
-    text-align: center;
-    margin-top: 10%;
+.profilePicture:hover{
+    border: solid white;
+}
+
+.users{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.profiles{
+    color: gray;
+}
+
+.profiles:hover{
+    color: #fff;
 }
