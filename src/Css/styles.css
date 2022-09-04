@@ -9,8 +9,10 @@ body {
     width: 100%;
     height: 100%;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-image: url("/src/Images/netflixBackground.jpg");
+    background-image: url("https://www.whats-on-netflix.com/wp-content/uploads/2021/08/netflix-library-photo-1280x720.jpg");
     background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     background-blend-mode: soft-light;
 }
 

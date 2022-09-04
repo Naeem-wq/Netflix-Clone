@@ -6,7 +6,9 @@ body {
     margin: 0%;
     background-color: rgb(29, 27, 27);
     color: #fff;
-    background-image: url("/src/Images/netflixBackground.jpg");
+    background-image: url("https://www.whats-on-netflix.com/wp-content/uploads/2021/08/netflix-library-photo-1280x720.jpg");
+    background-position: center center;
+    background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: soft-light;
 }
